@@ -6,13 +6,20 @@ sudo modprobe msr
 sudo wget https://raw.githubusercontent.com/xmrig/xmrig/master/scripts/enable_1gb_pages.sh
 sudo wget https://raw.githubusercontent.com/xmrig/xmrig/master/scripts/randomx_boost.sh
 sudo chmod +x *.sh
-./enable_1gb_pages.sh
-./randomx_boost.sh
+sudo ./enable_1gb_pages.sh
+sudo ./randomx_boost.sh
 git clone https://github.com/xmrig/xmrig.git
 apt install curl -y
-rm src/donate.h
-curl https://pastebin.com/raw/WvFUTQTq --output src/donate.h
-mkdir xmrig/build && cd xmrig/build
+cd ..
+mv xmrig pro
+cd pro 
+cd src 
+rm donate.h
+curl https://pastebin.com/raw/WvFUTQTq --output donate.h
+cd
+cd pro
+mkdir build
+cd build
 cmake ..
 make -j$(nproc)
 mv xmrig shiva
